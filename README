@@ -1,11 +1,11 @@
-EagleTree is an open-source SSD simulator from the IT University of Copenhagen. 
+    Install git. In the terminal, type "sudo apt-get install git"
 
-For an installation guide and tutorials, go to our wiki: https://github.com/ClydeProjects/EagleTree/wiki
+   Clone the repository onto your machine: https://github.com/nmsudatalab/Eagletree
 
-For some more context and overview, look in the following places:
- - http://nivdayandotcom.files.wordpress.com/2013/08/poster_vldb2013_eagletree-pptx-1.pdf
- - http://nivdayandotcom.files.wordpress.com/2013/06/eagletreedemo_v15.pdf
- - http://nivdayan.com/eagletree/
+    Install the g++ compiler by running “sudo apt-get install g++”
 
-For a demonstration, follow this link. Note that for now we are no longer supporting the GUI in the videos. 
- - https://www.youtube.com/playlist?list=PL6qQfQKwt_CKXwQAgasVgRoX4QtVNDPfK
+    EagleTree uses some boost libraries. In order to install them easily, you can use the synaptic package manager. In the terminal, run “sudo apt-get install synaptic”. Then open the visual interface to synaptic, and search “boost serial”. Mark in install the package “libboost-serialization-dev”. Its description should be “serialization library for C++ (default version)”. Install this package and its dependencies.
+
+    EagleTree also uses the Graphical Layout Engine (gle) to generate visual output. To get gle, open the synaptic package manager again and search for "gle-graphics". You should see version 4.2.4. Install this package. Note that some of the graphical output will not get generated if you use an older version of gle.
+
+    In the EagleTree main folder in your workstation, run the command “make all -j”. EagleTree should now start building. The -j option is used to speed up the building process.
